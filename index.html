@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bencana Sumatra 2025 — Laporan & Aksi</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#e11d48;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{margin:0;background:linear-gradient(180deg,#071023 0%,#071533 100%);color:#e6eef8}
+    .wrap{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:clamp(20px,3vw,34px)}
+    p.lead{color:var(--muted);margin-top:6px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .stats{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{flex:1 1 45%;background:var(--glass);padding:12px;border-radius:10px}
+    .stat h3{margin:0;font-size:20px}
+    .stat p{margin:6px 0 0;color:var(--muted)}
+    .sources{font-size:13px;color:var(--muted);margin-top:8px}
+    .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:8px;color:#e6eef8;cursor:pointer}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr;}.logo{width:56px;height:56px}}
+    /* alert */
+    .alert{background:#3b0b0b;padding:10px;border-radius:8px;color:#ffdede;margin-top:14px}
+    .map-wrap{height:260px;background:linear-gradient(180deg,#081222,#052033);display:flex;align-items:center;justify-content:center;border-radius:10px;color:var(--muted)}
+    .article-list{display:grid;gap:10px;margin-top:10px}
+    .article{padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">BS</div>
+      <div>
+        <h1>Bencana di Sumatra — Laporan &amp; Aksi</h1>
+        <p class="lead">Ringkasan kejadian, data korban terkini, pusat bantuan, dan panduan aman bagi warga terdampak.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card">
+          <h2>Pembaruan Utama</h2>
+          <div class="alert" id="main-alert">Hujan ekstrem + longsor dan banjir bandang melanda Aceh, Sumatera Utara, dan Sumatera Barat sejak akhir November 2025. Data di bawah diperbarui otomatis (jika tersedia).</div>
+
+          <section style="margin-top:12px">
+            <h3>Statistik Cepat</h3>
+            <div class="stats">
+              <div class="stat">
+                <h3 id="stat-dead">—</h3>
+                <p>Korban meninggal</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-missing">—</h3>
+                <p>Masih dinyatakan hilang</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-affected">—</h3>
+                <p>Jiwan terdampak</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-evac">—</h3>
+                <p>Pengungsi</p>
+              </div>
+            </div>
+            <div class="sources">Sumber utama: BNPB, liputan media nasional, dan laporan internasional.</div>
+          </section>
+
+          <section style="margin-top:14px">
+            <h3>Peta & Area Terdampak</h3>
+            <div class="map-wrap">[Peta interaktif bisa ditempatkan di sini — gunakan Leaflet/Mapbox dan data BNPB/BMKG]</div>
+          </section>
+
+          <section style="margin-top:14px">
+            <h3>Berita Singkat</h3>
+            <div class="article-list" id="news-list">
+              <div class="article"><strong>UPDATE:</strong> Data korban mengalami peningkatan; operasi SAR dan distribusi logistik berjalan intensif.</div>
+              <div class="article small">Analisis menunjukkan faktor hujan ekstrem ditambah kerusakan hutan dan aktivitas tambang memperbesar skala bencana.</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Cara Membantu (Praktis)</h3>
+          <ul>
+            <li>Donasi ke pos resmi pemerintah (BNPB/relawan terdaftar) atau organisasi terpercaya.</li>
+            <li>Kirim barang mengikuti syarat logistik (makanan siap saji, air mineral, selimut, obat dasar).</li>
+            <li>Jangan menyebarkan foto korban tanpa izin; cek fakta sebelum membagikan informasi.</li>
+          </ul>
+          <div class="small">Tip: koordinasikan pengiriman barang dengan gudang bantuan setempat agar tidak menambah beban logistik.</div>
+        </div>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Info Singkat</h3>
+          <p class="small">Provinsi terdampak utama: Aceh, Sumatera Utara, Sumatera Barat. Penyebab: hujan ekstrem, longsor, banjir bandang; gempa kecil tercatat di beberapa titik (BMKG realtime).</p>
+
+          <div style="margin-top:10px">
+            <h4>Link Penting</h4>
+            <ul class="small">
+              <li><a href="#" style="color:inherit">BNPB — Pusat Data</a></li>
+              <li><a href="#" style="color:inherit">BMKG — Gempa & Cuaca</a></li>
+              <li><a href="#" style="color:inherit">Daftar Posko Relawan</a></li>
+            </ul>
+          </div>
+
+          <div style="margin-top:10px">
+            <h4>Kontak Darurat</h4>
+            <div class="small">BNPB: 117 / Hotline Lokal: lihat pengumuman provinsi</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Perkembangan Terbaru</h3>
+          <div class="small">(Skrip ini dapat dihubungkan ke API berita untuk menarik headline terbaru secara otomatis.)</div>
+          <div style="margin-top:10px">
+            <button class="btn" id="refresh">Segarkan Data</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Halaman ini dibuat untuk tujuan informasi dan koordinasi bantuan. Perbarui data dari sumber resmi sebelum mengambil keputusan kritis.
+    </footer>
+  </div>
+
+  <script>
+    // Data awal (isi dengan angka yang valid saat deploy).
+    const initial = {
+      dead: 916,
+      missing: 274,
+      affected: 2100000,
+      evac: 589400
+    };
+
+    function fmt(n){return n===null||n===undefined?'-':n.toLocaleString('id')}
+    document.getElementById('stat-dead').textContent = fmt(initial.dead)
+    document.getElementById('stat-missing').textContent = fmt(initial.missing)
+    document.getElementById('stat-affected').textContent = fmt(initial.affected)
+    document.getElementById('stat-evac').textContent = fmt(initial.evac)
+
+    // Tombol refresh: contoh logika untuk fetch API (ganti URL dengan endpoint data resmi)
+    document.getElementById('refresh').addEventListener('click', async ()=>{
+      try{
+        // contoh: const res = await fetch('https://api.example.com/bencana/sumatra/latest')
+        // const data = await res.json()
+        // simulasi update singkat
+        const data = {dead:916, missing:274, affected:2100000, evac:589400}
+        document.getElementById('stat-dead').textContent = fmt(data.dead)
+        document.getElementById('stat-missing').textContent = fmt(data.missing)
+        document.getElementById('stat-affected').textContent = fmt(data.affected)
+        document.getElementById('stat-evac').textContent = fmt(data.evac)
+        alert('Data diperbarui (simulasi). Ganti URL fetch di skrip untuk koneksi nyata.')
+      }catch(e){alert('Gagal mengambil data: '+e)}
+    })
+  </script>
+</body>
+</html>
